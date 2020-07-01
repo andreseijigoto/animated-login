@@ -4,6 +4,9 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  .title {
+    margin-bottom: 2rem;
+  }
   .swipe {
     @extend %animation-config;
     background: linear-gradient(253deg,#3ba5b4 0,#38ba8a 100%);

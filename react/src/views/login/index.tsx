@@ -1,6 +1,4 @@
 import React, { useState, MouseEvent } from 'react';
-// import { Link } from 'react-router-dom';
-// import { FiLogIn } from 'react-icons/fi';
 import './styles.scss';
 
 const Login = () => {
