@@ -1,0 +1,59 @@
+%base-form-element {
+  @extend %animation-config;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  min-width: 5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+  border: $border-input;
+  border-radius: .25rem;
+  padding: calc(.5rem - 1px) calc(.75rem - 1px);
+  display: inline-flex;
+  justify-content: flex-start;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: middle;
+  &:focus {
+    background-color: #fff;
+    border: $border-input-focus;
+    outline: unset;
+  }
+  &:not(:focus):hover {
+    border: $border-input-hover;
+  }
+  &.rounded {
+    border-radius: 10000rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.form {
+}
+.fieldset {
+  padding: 0;
+  width: 100%;
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+  &.placeholder {
+    label {
+      display: none;
+    }
+  }
+}
+.label {
+  display: block;
+  font-size: .9rem;
+  margin-bottom: .25rem;
+}
+.input {
+  @extend %base-form-element;
+}
+.select {
+  @extend %base-form-element;
+}

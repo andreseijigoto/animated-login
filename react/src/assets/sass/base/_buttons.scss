@@ -1,0 +1,25 @@
+.button {
+  @extend %animation-config;
+  min-height: 3rem;
+  min-width: 10rem;
+  background-color: $button-background-color;
+  color: $button-color;
+  border: none;
+  padding: calc(.5rem - 1px) calc(.75rem - 1px);
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:focus {
+    outline: unset;
+  }
+  &:hover {
+    background-color: lighten($button-background-color, 2.5);
+  }
+  &.rounded {
+    border-radius: 1000rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

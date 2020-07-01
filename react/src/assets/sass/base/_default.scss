@@ -1,0 +1,32 @@
+html, body {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+#root {
+  min-height: 100vh;
+}
+body, button, input, select, textarea {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+p {
+  &:not(:last-child) {
+    margin: .75rem 0 0;
+  }
+}
+.title {
+  font-size: 3.25rem;
+  line-height: 58px;
+  margin: 0;
+}
+.tx-center {
+  text-align: center;
+}
+.tx-right {
+  text-align: right;
+}
+.tx-justify {
+  text-align: justify;
+}

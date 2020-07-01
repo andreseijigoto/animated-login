@@ -1,0 +1,25 @@
+// COLORS CONFIG --------------------------------------------------------/
+@each $cls, $val in $colors {
+  .tx-#{$cls} {
+  	color: #{$val} !important;
+  	fill: #{$val} !important;
+  }
+  .bg-#{$cls} {
+    background-color: #{$val} !important;
+    &.is-gradient {
+    	background-color: #{$val} !important;
+      background: -moz-linear-gradient(141deg, darken($val, 15) 0%, $val 71%, lighten($val, 12.5) 100%);
+      background: -webkit-linear-gradient(141deg, darken($val, 15) 0%, $val 71%, lighten($val, 12.5) 100%);
+      background-image: linear-gradient(141deg, darken($val, 15) 0%, $val 71%, lighten($val, 12.5) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($val, 15)', endColorstr='#{$val}', GradientType=1 );
+    }
+  }
+  .ln-#{$cls} {
+    background-color: transparent !important;
+    color: #{$val} !important;
+    border-color: #{$val} !important;
+  }
+  .bd-#{$cls} {
+  	border-color: #{$val} !important;
+  }
+};

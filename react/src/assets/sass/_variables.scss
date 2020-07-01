@@ -1,0 +1,73 @@
+
+%animation-config {
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+}
+
+$colors: (
+  "red": #900000,
+  "blue": #336799,
+  "teal": teal,
+  "green": #28b498,
+  "yellow": #daa300,
+  "orange": #e0621e,
+  "white": #fff,
+  "lightgrey": #ccc,
+  "grey": #999,
+  "darkgrey": #333,
+  "black": #000,
+  "whitesmoke": whitesmoke,
+  "disabled": rgba(122, 122, 122, 0.7)
+);
+
+// FORM
+$border-input: 1px solid #DDD;
+$border-input-focus: 1px solid #999;
+$border-input-hover: 1px solid #BBB;
+
+// BUTTONS
+$button-color: #FFF;
+$button-background-color: #28b498;
+
+// 2. Global
+// ==========================================================================
+$ldp: "(orientation: landscape)";
+$prt: "(orientation: portrait)";
+
+$sm-up: 601px !default;
+$md-up: 993px !default;
+$nm-up: 1024px !default;
+$lg-up: 1200px !default;
+$xlg-up: 1366px !default;
+
+$sm: 600px !default;
+$md: 992px !default;
+$nm: 1023px !default;
+$lg: 1199px !default;
+$xlg: 1365px !default;
+
+$sm-and-up: "only screen and (min-width : #{$sm-up})" !default;
+$md-and-up: "only screen and (min-width : #{$md-up})" !default;
+$nm-and-up: "only screen and (min-width : #{$nm-up})" !default;
+$lg-and-up: "only screen and (min-width : #{$lg-up})" !default;
+$xlg-and-up: "only screen and (min-width : #{$xlg-up})" !default;
+
+$sm-and-down: "only screen and (max-width : #{$sm})" !default;
+$md-and-down: "only screen and (max-width : #{$md})" !default;
+$nm-and-down: "only screen and (max-width : #{$nm})" !default;
+$lg-and-down: "only screen and (max-width : #{$lg})" !default;
+
+$sm-only: "only screen and (max-width : #{$sm})" !default;
+$md-only: "only screen and (min-width : #{$sm-up}) and (max-width : #{$nm})" !default;
+$nm-only: "only screen and (min-width : #{$nm-up}) and (max-width : #{$lg})" !default;
+$lg-only: "only screen and (min-width : #{$lg-up}) and (max-width : #{$xlg})" !default;
+
+$ipadpro-landscape: "only screen and (min-height: #{$sm-up}) and (max-width: #{$xlg-up}) and #{$ldp}";
+$ipadpro-portrait: "only screen and (min-width: #{$sm-up}) and (max-height: #{$xlg-up}) and #{$prt}";
+
+$ipad-landscape: "only screen and (max-width: #{$nm-up}) and (min-height: #{$sm-up}) and (max-height: #{$md}) and #{$ldp}";
+$ipad-portrait: "only screen and (min-width: #{$sm-up}) and (max-width: #{$md}) and (max-height: #{$nm-up}) and #{$prt}";
+
+$mobile-landscape: "only screen and (max-width: #{$md}) and (max-height: #{$sm}) and #{$ldp}" !default;
+$mobile-portrait: "only screen and (max-width: #{$sm}) and (max-height: #{$md}) and #{$prt}" !default;
