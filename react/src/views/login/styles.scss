@@ -347,7 +347,52 @@
     }
   }
 }
-// @media #{$mobile-landscape} {}
+@media #{$mobile-landscape} {
+  #page-login {
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      line-height: initial;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+    .button {
+      width: 170px !important;
+      min-height: 2.5rem;
+    }
+    .swipe {
+      left: calc(100vw - 200px);
+      &.signup-mode {
+        right: calc(100vw - 200px);
+      }
+      &.signin-mode {
+        left: calc(100vw - 200px);
+      }
+      .swipe-container {
+        padding: 0 .75rem;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    .login, .register {
+      width: calc(100vw - 200px);
+      min-height: 100%;
+      .content {
+        padding: .75rem;
+      }
+      .input {
+        height: 2.5rem;
+      }
+    }
+    .login.toggle-show {
+      left: 100px;
+    }
+    .register.toggle-show {
+      right: 100px;
+    }
+  }
+}
 @media #{$mobile-portrait} {
   #page-login {
     overflow: auto;
