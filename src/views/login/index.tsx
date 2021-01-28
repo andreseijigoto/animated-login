@@ -3,6 +3,7 @@ import './styles.scss';
 
 const Login = () => {
 
+  const shapes = [];
   const [registerMode, setRegisterMode] = useState<Boolean>(false);
 
   function handleChoseChange() {
@@ -13,13 +14,13 @@ const Login = () => {
     evt.preventDefault();
   }
 
+  for(let i = 1; i <= 7; i++) shapes.push(<div className={`shape-${i}`}/>);
+
   return (
     <div id="page-login">
-      <div className={`swipe ${registerMode ? "signup-mode" : "signin-mode"}`}>
+      <div className={`swipe sign${registerMode ? "up" : "in"}-mode`}>
         <div className="swipe-container">
-          <h1 className="title">
-            {registerMode ? "One Of Us?" : "New Here?" }
-          </h1>
+          <h1 className="title">{registerMode ? "One Of Us?" : "New Here?" }</h1>
           <p>
             {
               registerMode
@@ -28,29 +29,17 @@ const Login = () => {
             }
           </p>
           <div className="tx-center">
-            <button className="button rounded" onClick={() => handleChoseChange()}>
-              {registerMode ? "Sign In" : "Sign Up"}
-            </button>
+            <button className="button rounded" onClick={() => handleChoseChange()}>Sign {registerMode ? "In" : "Up"}</button>
           </div>
         </div>
-        <div className={`figures ${!registerMode ? "toggle-show" : ""}`}>
-          <div className="shape-1"></div>
-          <div className="shape-2"></div>
-          <div className="shape-3"></div>
-          <div className="shape-4"></div>
-          <div className="shape-5"></div>
-          <div className="shape-6"></div>
-          <div className="shape-7"></div>
-        </div>
+        <div className="figures">{shapes}</div>
       </div>
       <div className={`login ${registerMode ? "toggle-show" : ""}`}>
         <div className="content">
           <h1 className="title">Login to Your Account</h1>
           <form className="form">
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="username">
-                Username
-              </label>
+              <label className="label" htmlFor="username">Username</label>
               <input
                 className="input rounded"
                 id="username"
@@ -59,9 +48,7 @@ const Login = () => {
               />
             </div>
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="password-login">
-                Password
-              </label>
+              <label className="label" htmlFor="password-login">Password</label>
               <input
                 className="input rounded"
                 type="password"
@@ -71,9 +58,7 @@ const Login = () => {
               />
             </div>
             <div className="tx-center">
-              <button className="button rounded" onClick={handleClickMethod}>
-                Sign In
-              </button>
+              <button className="button rounded" onClick={handleClickMethod}>Sign In</button>
             </div>
           </form>
         </div>
@@ -83,9 +68,7 @@ const Login = () => {
           <h1 className="title">Create Free Account</h1>
           <form className="form">
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="name">
-                Name
-              </label>
+              <label className="label" htmlFor="name">Name</label>
               <input
                 className="input rounded"
                 id="name"
@@ -94,9 +77,7 @@ const Login = () => {
               />
             </div>
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="email">
-                E-mail
-              </label>
+              <label className="label" htmlFor="email">E-mail</label>
               <input
                 className="input rounded"
                 type="email"
@@ -106,9 +87,7 @@ const Login = () => {
               />
             </div>
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="password">
-                Password
-              </label>
+              <label className="label" htmlFor="password">Password</label>
               <input
                 className="input rounded"
                 type="password"
@@ -118,9 +97,7 @@ const Login = () => {
               />
             </div>
             <div className="fieldset placeholder">
-              <label className="label" htmlFor="password-confirm">
-                Password confirmation
-              </label>
+              <label className="label" htmlFor="password-confirm">Password confirmation</label>
               <input
                 className="input rounded"
                 type="password"
@@ -130,9 +107,7 @@ const Login = () => {
               />
             </div>
             <div className="tx-center">
-              <button className="button rounded" onClick={handleClickMethod}>
-                Sign Up
-              </button>
+              <button className="button rounded" onClick={handleClickMethod}>Sign Up</button>
             </div>
           </form>
         </div>
