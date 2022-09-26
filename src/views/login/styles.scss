@@ -4,9 +4,11 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   .title {
     margin-bottom: 2rem;
   }
+
   .swipe {
     @extend %animation-config;
     background: linear-gradient(253deg,#3ba5b4 0,#38ba8a 100%);
@@ -17,6 +19,7 @@
     right: 0;
     z-index: 100;
     overflow: hidden;
+
     &.signup-mode {
       transition-duration: 1s;
       transition-property: left, right;
@@ -28,6 +31,7 @@
         right: -100vw;
       }
     }
+
     &.signin-mode {
       transition-duration: 1s;
       transition-property: right, left;
@@ -39,6 +43,7 @@
         left: -100vw;
       }
     }
+
     .swipe-container {
       position: relative;
       align-items: center;
@@ -53,21 +58,25 @@
       margin: 0 auto;
       text-align: center;
     }
+
     p {
       font-size: 1.375rem;
       line-height: 2rem;
     }
+
     .button {
       box-shadow: 0 12px 24px rgba(34,51,49,.13);
       background-color: white;
       color: black;
       width: 200px;
+
       &:hover {
         box-shadow: none;
         color: map-get($colors, "green");
       }
     }
   }
+
   .login {
     @extend %animation-config;
     transition-duration: .5s;
@@ -82,6 +91,7 @@
     justify-content: center;
     z-index: 10;
     align-items: center;
+
     &.toggle-show {
       transition-delay: 0s;
       transition-duration: 1s;
@@ -89,23 +99,28 @@
       opacity: 0;
       z-index: 0;
     }
+
     .content {
       display: flex;
       flex-direction: column;
       padding: 2rem;
       align-items: center;
       justify-content: center;
+
       .form {
         width: 400px;
       }
+
       .button {
         width: 200px;
       }
+
       .title {
         text-align: center;
       }
     }
   }
+
   .register {
     @extend %animation-config;
     transition-duration: .5s;
@@ -120,6 +135,7 @@
     justify-content: center;
     z-index: 10;
     align-items: center;
+
     &.toggle-show {
       transition-delay: 0s;
       transition-duration: 1s;
@@ -127,6 +143,7 @@
       opacity: 0;
       z-index: 0;
     }
+
     .content {
       display: flex;
       flex-direction: column;
@@ -136,14 +153,17 @@
       .form {
         width: 400px;
       }
+
       .button {
         width: 200px;
       }
+
       .title {
         text-align: center;
       }
     }
   }
+
   .figures {
     @extend %animation-config;
     transition-duration: 1.25s;
@@ -151,12 +171,14 @@
     height: 100vh;
     top: 0;
     z-index: -1;
+  
     div[class*="shape-"] {
       position: absolute;
       background-color: rgba(255,255,255,.08);
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
+
     .shape-1 {
       width: 70px;
       height: 140px;
@@ -165,6 +187,7 @@
       -webkit-transform: rotate(-65deg);
       transform: rotate(-65deg);
     }
+
     .shape-2 {
       width: 250px;
       height: 250px;
@@ -172,6 +195,7 @@
       top: 13%;
       left: -4%;
     }
+
     .shape-3 {
       width: 0;
       height: 0;
@@ -184,6 +208,7 @@
       -webkit-transform: rotate(-46deg);
       transform: rotate(-46deg);
     }
+
     .shape-4 {
       width: 75px;
       height: 150px;
@@ -192,6 +217,7 @@
       -webkit-transform: rotate(-75deg);
       transform: rotate(-75deg);
     }
+
     .shape-5 {
       width: 250px;
       height: 250px;
@@ -199,6 +225,7 @@
       right: 4%;
       border-radius: 100%;
     }
+
     .shape-6 {
       width: 0;
       height: 0;
@@ -211,6 +238,7 @@
       -webkit-transform: rotate(135deg);
       transform: rotate(135deg);
     }
+
     .shape-7 {
       width: 140px;
       height: 140px;
@@ -225,25 +253,32 @@
   #page-login {
     .swipe {
       left: calc(100vw - 430px);
+
       &.signup-mode {
         right: calc(100vw - 430px);
       }
+
       &.signin-mode {
         left: calc(100vw - 430px);
       }
+
       .swipe-container {
         width: 350px;
         max-width: 100%;
       }
     }
+
     .login {
       width: calc(100vw - 430px);
+
       &.toggle-show {
         left: 215px;
       }
     }
+
     .register {
       width: calc(100vw - 430px);
+
       &.toggle-show {
         right: 215px;
       }
@@ -254,23 +289,28 @@
   #page-login {
     .swipe {
       left: calc(100vw - 350px);
+
       &.signup-mode {
         right: calc(100vw - 350px);
       }
+
       &.signin-mode {
         left: calc(100vw - 350px);
       }
+
       .swipe-container {
         width: 334px;
         max-width: 100%;
       }
     }
+
     .login {
       width: calc(100vw - 350px);
       &.toggle-show {
         left: 175px;
       }
     }
+
     .register {
       width: calc(100vw - 350px);
       &.toggle-show {
@@ -279,74 +319,93 @@
     }
   }
 }
+
 @media #{$ipadpro-portrait} {
   #page-login {
     .swipe {
       left: calc(100vw - 350px);
+
       &.signup-mode {
         right: calc(100vw - 350px);
       }
+
       &.signin-mode {
         left: calc(100vw - 350px);
       }
+
       .swipe-container {
         width: 334px;
         max-width: 100%;
       }
     }
+
     .login {
       width: calc(100vw - 350px);
+
       &.toggle-show {
         left: 175px;
       }
     }
     .register {
       width: calc(100vw - 350px);
+
       &.toggle-show {
         right: 175px;
       }
     }
   }
 }
+
 @media #{$ipad-portrait} {
   #page-login {
     .swipe {
       left: calc(100vw - 275px);
+
       &.signup-mode {
         right: calc(100vw - 275px);
       }
+
       &.signin-mode {
         left: calc(100vw - 275px);
       }
+
       .swipe-container {
         width: 260px;
         max-width: 100%;
+
         .title {
           font-size: 2.375rem;
         }
+
         p {
           font-size: 1.125rem;
         }
       }
     }
+
     .login, .register {
       width: calc(100vw - 275px);
+  
       .content {
         padding: .75rem;
       }
+
       .title {
         font-size: 2.775rem;
         line-height: 58px;
       }
     }
+
     .login.toggle-show {
       left: 238px;
     }
+
     .register.toggle-show {
       right: 238px;
     }
   }
 }
+
 @media #{$mobile-landscape} {
   #page-login {
     .title {
@@ -354,40 +413,51 @@
       margin-bottom: 1rem;
       line-height: initial;
     }
+
     p {
       font-size: 1rem !important;
     }
+
     .button {
       width: 170px !important;
       min-height: 2.5rem;
     }
+
     .swipe {
       left: calc(100vw - 200px);
+
       &.signup-mode {
         right: calc(100vw - 200px);
       }
+
       &.signin-mode {
         left: calc(100vw - 200px);
       }
+
       .swipe-container {
         padding: 0 .75rem;
         width: 100%;
         max-width: 100%;
       }
     }
+
     .login, .register {
       width: calc(100vw - 200px);
       min-height: 100%;
+
       .content {
         padding: .75rem;
       }
+
       .input {
         height: 2.5rem;
       }
     }
+
     .login.toggle-show {
       left: 100px;
     }
+
     .register.toggle-show {
       right: 100px;
     }
@@ -399,9 +469,11 @@
     .title {
       font-size: 2rem;
     }
+
     p {
       font-size: 1rem;
     }
+
     .swipe {
       position: relative;
       width: 100%;
@@ -409,47 +481,57 @@
       top: unset;
       left: unset;
       right: unset;
+
       &.signup-mode,
       &.signin-mode {
         top: unset !important;
         left: unset !important;
         right: unset !important;
       }
+
       .swipe-container {
         width: 100%;
         max-width: 100%;
         padding: .75rem 1rem 1rem;
       }
     }
+
     .figures {
       width: 200vw;
       height: 100%;
     }
+
     .login, .register {
       width: 100%;
       top: unset;
       left: 0;
       right: 0;
       height: auto;
+
       &.toggle-show,
       &.signup-mode,
       &.signin-mode {
         left: 0;
         right: 0;
       }
+  
       .content {
         padding: 2rem 1rem;
       }
+  
       .form {
         width: 100% !important;
       }
+
       .title {
         margin-bottom: 1.5rem;
       }
+
       .input {
         min-width: auto;
         width: 100%;
       }
+
       .button {
         margin-top: 2rem;
       }

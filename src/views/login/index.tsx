@@ -21,6 +21,7 @@ const Login = () => {
       <div className={`swipe sign${registerMode ? "up" : "in"}-mode`}>
         <div className="swipe-container">
           <h1 className="title">{registerMode ? "One Of Us?" : "New Here?" }</h1>
+
           <p>
             {
               registerMode
@@ -28,18 +29,23 @@ const Login = () => {
                 : "Sign up and discover a great amount of new opportunities!"
             }
           </p>
+
           <div className="tx-center">
             <button className="button rounded" onClick={() => handleChoseChange()}>Sign {registerMode ? "In" : "Up"}</button>
           </div>
         </div>
+
         <div className="figures">{shapes}</div>
       </div>
+
       <div className={`login ${registerMode ? "toggle-show" : ""}`}>
         <div className="content">
           <h1 className="title">Login to Your Account</h1>
+
           <form className="form">
             <div className="fieldset placeholder">
               <label className="label" htmlFor="username">Username</label>
+
               <input
                 className="input rounded"
                 id="username"
@@ -47,8 +53,10 @@ const Login = () => {
                 placeholder="Username"
               />
             </div>
+
             <div className="fieldset placeholder">
               <label className="label" htmlFor="password-login">Password</label>
+
               <input
                 className="input rounded"
                 type="password"
@@ -57,18 +65,22 @@ const Login = () => {
                 placeholder="Password"
               />
             </div>
+
             <div className="tx-center">
               <button className="button rounded" onClick={handleClickMethod}>Sign In</button>
             </div>
           </form>
         </div>
       </div>
+
       <div className={`register ${!registerMode ? "toggle-show" : ""}`}>
         <div className="content">
           <h1 className="title">Create Free Account</h1>
+  
           <form className="form">
             <div className="fieldset placeholder">
               <label className="label" htmlFor="name">Name</label>
+
               <input
                 className="input rounded"
                 id="name"
@@ -76,8 +88,10 @@ const Login = () => {
                 placeholder="Name"
               />
             </div>
+
             <div className="fieldset placeholder">
               <label className="label" htmlFor="email">E-mail</label>
+
               <input
                 className="input rounded"
                 type="email"
@@ -86,8 +100,10 @@ const Login = () => {
                 placeholder="E-mail"
               />
             </div>
+
             <div className="fieldset placeholder">
               <label className="label" htmlFor="password">Password</label>
+
               <input
                 className="input rounded"
                 type="password"
@@ -96,6 +112,7 @@ const Login = () => {
                 placeholder="Password"
               />
             </div>
+
             <div className="fieldset placeholder">
               <label className="label" htmlFor="password-confirm">Password confirmation</label>
               <input
@@ -106,6 +123,7 @@ const Login = () => {
                 placeholder="Password confirmation"
               />
             </div>
+
             <div className="tx-center">
               <button className="button rounded" onClick={handleClickMethod}>Sign Up</button>
             </div>
